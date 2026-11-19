@@ -1,0 +1,106 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 0.9rem; letter-spacing: 0.1rem;
+}
+
+html { scroll-behavior: smooth; }
+
+body, h1, section#about > p, section#me > p { background-color: #000000; }
+h1, span, a { all: unset; }
+
+
+body { min-height: 100vh; background-image: linear-gradient(to right, #FFFFFFA0 1px, transparent 1px), linear-gradient(to bottom, #FFFFFFA0 1px, transparent 1px); background-size: 130px 130px; background-position: -1px -1px; }
+
+main { display: flex; flex-direction: column; }
+
+/* -------------------------------------- */
+
+section#top { font-family: "Space Grotesk", sans-serif; margin: 120px 60px 0px 60px; }
+
+h1 {
+  font-size: 4.5rem; font-weight: 900; font-family: "Space Grotesk", sans-serif;
+}
+
+div.hover-target {
+  cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); left: 0; width: 100%; height: 44px; margin-top: 2px;
+}
+
+div.full-stack { display: flex; align-items: center; color: #000000; -webkit-text-stroke: 0.7px #FFFFFF; }
+
+div.full-stack > span { font-size: 3.5rem; line-height: 1px; margin-inline: 5px 4px; }
+
+div.full-stack > h1:last-child { margin-right: 15px; }
+
+div.hover-target:hover + div.full-stack > * {
+  color: #FFFFFF; -webkit-text-stroke-width: 0px;
+}
+
+div.hover-target:hover ~ h1 { color: #000000; -webkit-text-stroke: 0.6px #FFFFFF; }
+
+/* -------------------------------------- */
+
+div#contact {
+  font-family: "Bitcount Single", system-ui; text-transform: uppercase;
+  border: 1.5px solid #FFFFFFA0; background-color: #000000; padding: 10.5px 13px 10px 13px; box-shadow: 3px 3px 0 black, 3px 3px 0 1px #FFFFFF;
+}
+
+div#contact > div:first-child { margin-bottom: 8px; }
+
+div#contact > div:first-child > u {
+  text-underline-offset: 2.5px; text-decoration: 2px dotted underline; text-decoration-color: #FFFFFF70; font-size: 1rem;
+}
+
+div#contact:hover > div:first-child > u { text-decoration-color: #FFFFFF; color: #FFFFFF70; }
+
+div#contact > div > div {
+  display: flex; align-items: baseline; column-gap: 5px;
+}
+
+div#contact > div > div > span:last-child {
+  font-family: "IBM Plex Mono", monospace;
+  border: 1.5px solid #FFFFFF; padding: 1px 5px 2px 5px; border-radius: 2px; font-weight: 500;
+}
+
+/* -------------------------------------- */
+
+h5 {
+  font-size: 1.4rem; font-weight: 400; text-transform: uppercase; font-family: "Bitcount Single", system-ui; user-select: none;
+}
+
+p {
+  line-height: 1.5; padding: 5px;
+  font-family: "Space Grotesk", sans-serif; font-size: 1rem;
+}
+
+section#about > p {
+  font-family: "JetBrains Mono", monospace; text-transform: uppercase; padding: 10px; font-weight: 600; font-size: 0.9rem; color: #FFFFFFA0
+} 
+
+section#about > p > span { color: #FFFFFF; }
+
+/* -------------------------------------- */
+
+section#overview { position: relative; background-color: #000000; padding: 70px 60px 70px 30px; }
+
+section#overview::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 500px; /* height of fade */
+  background: linear-gradient(to bottom, transparent, #000000);
+  pointer-events: none;
+}
+
+section#overview > div { display: grid; grid-template-columns: 1fr 5fr; }
+section#overview > div > div { border-top: 1px dotted; }
+
+div#overview-points { padding-block: 5px 30px; display: flex; column-gap: 10px; }
+
+div#overview-points > * {
+  all: unset; background-color: #FFFFFFF0; color: #000000; border-radius: 10px; font-weight: 700; padding: 2px 10px 1px 10px; font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; user-select: none;
+}
+

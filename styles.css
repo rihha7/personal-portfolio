@@ -23,7 +23,7 @@ h1 {
 }
 
 div.hover-target {
-  cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); left: 0; width: 100%; height: 44px; margin-top: 2px;
+  cursor: default; position: absolute; top: 50%; transform: translateY(-50%); left: 0; width: 100%; height: 44px; margin-top: 2px;
 }
 
 div.full-stack { display: flex; align-items: center; color: #000000; -webkit-text-stroke: 0.7px #FFFFFF; }
@@ -83,17 +83,22 @@ section#about > p > span { color: #FFFFFF; }
 
 section#overview { position: relative; background-color: #000000; padding: 70px 60px 70px 30px; }
 
+section#overview::before, section#overview::after {
+  content: ""; z-index: -1; position: absolute; left: 0; width: 100%; height: 500px; pointer-events: none;
+
+}
+
 section#overview::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
   bottom: 100%;
-  left: 0;
-  width: 100%;
-  height: 500px; /* height of fade */
   background: linear-gradient(to bottom, transparent, #000000);
+}
+
+section#overview::after {
+  top: 100%;
+  background: linear-gradient(to bottom, #000000, transparent);
   pointer-events: none;
 }
+
 
 section#overview > div { display: grid; grid-template-columns: 1fr 5fr; }
 section#overview > div > div { border-top: 1px dotted; }
